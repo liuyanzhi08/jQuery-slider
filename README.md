@@ -1,11 +1,10 @@
 >Copyright (c) 2013 Nancle from CAU CS101
+>
 >Licensed under the MIT License.
 >
->copyright: Nancle from CAU CS 101
 >version: 1.0
 >
->**设计思路**： 利用mousedown mousenup mousenmove三个函数来模仿拖拽效果。一个全局变量if_mouse_down
-   	    用于判断是否按下鼠标左键。滑块位置与滑块最大滚动距离的比值，等于内容块位置与内容块的高度
+
 
 *使用方法：{yourId}替换成你的id
 
