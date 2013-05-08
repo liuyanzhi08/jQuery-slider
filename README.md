@@ -8,8 +8,8 @@
    	    用于判断是否按下鼠标左键。滑块位置与滑块最大滚动距离的比值，等于内容块位置与内容块的高度
 
 *使用方法：{yourId}替换成你的id
+
 	1. [ HTML ] 
-		<pre>
         <div id="{yourId}">
              <div id="{yourId}_content_panel">
                  <div id="{yourId}_content">
@@ -19,7 +19,6 @@
                  <div id="{yourId}_bar"></div>
              </div>
          </div>
-         </pre>
          
     2.[ CSS ]  这些参数是必备的，另外的可以根据自己的需要添加
         #vscroll{ width:px; height:px; position:relative; overflow:hidden }
