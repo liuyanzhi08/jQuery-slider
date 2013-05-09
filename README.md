@@ -4,7 +4,7 @@
 >
 >version: 1.0
 >
->经过IE6+，chrome，firefox测试兼容
+>经过IE+&IE6+，chrome，firefox测试兼容
 
 
 *使用方法：{yourId}替换成你的id

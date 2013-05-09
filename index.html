@@ -25,13 +25,21 @@ $(function(){
 </script>
 
 <style type="text/css">
-	body{background:#89b543; font-family:Verdana, Geneva, sans-serif; font-size:14px; line-height:30px}
-	pre{ font-family:Verdana, Geneva, sans-serif; font-size:14px; background:#fafafa; }
-	pre a{ color:#000; text-decoration:none} pre a{ color:#000; text-decoration:none}	
+	/*site css start*/
+	body{background:#89b543; font-family:Verdana, Geneva, sans-serif; font-size:14px; line-height:29px}
 	.wrapper{ width:800px; margin:0 auto;  margin-bottom:10px;  }
 	.wrapper h1{ text-align:center; width:800px; font-size:30px }
+	.tip{ width:740px; margin:0 auto; background:#fff; padding:6px 30px}
+	.tip h1{ font-size:14px; line-height:30px}
+	.tip h1 span{font-size:13px; font-weight:normal; margin-left:10px}
+	.tip p{ margin:0 } .tip a{ color:#000; text-decoration:none }
+	.tip .codeWrapper{ background:#eaeaea }
+	.tip code{font-size:13px; font-family:Verdana, Geneva, sans-serif;}
+	.tip ol{ background:#eaeaea;}
+	.tip ol li{ list-style: decimal-leading-zero; border-left: 3px solid #999; padding: 0 5px;}
+	/*site css end*/
 	
-	
+	/*core css start*/
 	#vscroll{ width:800px; height:200px; background:#eee; position:relative; overflow:hidden }
 	#vscroll_content_panel{ width:770px; height:200px; background:#fafafa; position:absolute; top:0px; left:0px; overflow:hidden }
 	#vscroll_content{ width:750px;  position:absolute; top:0; left:0; text-indent:30px; padding:6px 10px}
@@ -43,6 +51,7 @@ $(function(){
 	#hscroll_content{ height:160px; position:absolute; top:0; left:0; width:4000px; text-indent:30px;}
 	#hscroll_bar_panel{ width:800px; height:20px; background:#fafafa; position:absolute; top:180px; left:0px }
 	#hscroll_bar{ width:50px; height:10px; background-color:#000; position:absolute; top:5px; left:0px }
+	/*core css end*/
 </style>
 <body>
 	<div class="wrapper">
@@ -63,8 +72,7 @@ $(function(){
             	<div id="vscroll_bar"></div>
             </div>
    	    </div>
-    </div>
-        
+    </div>     
     <div class="wrapper">
         <div id="hscroll">
         	<div id="hscroll_content_panel">
@@ -81,45 +89,65 @@ $(function(){
             </div>
    	    </div>
     </div>
-    <div class="wrapper">
-    	<pre>
-        <strong>[ 经过IE6+，chrome，firefox测试兼容 ]
-    	使用方法： {yourId}替换成你的id</strong>
+    <div class="tip">	
+    	<h1>经过IE6&IE6+，chrome，firefox测试兼容<span>使用方法： {yourId}替换成你的id</span></h1>
+      
+        <h1>HTML</h1>
+        <div class="codeWrapper">
+        	<ol>
+            	<li><code>&lt;div id="{yourId}"&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="{yourId}_content_panel"&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="{yourId}_content"&gt;&lt;/div&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="{yourId}_bar_panel"&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div id="{yourId}_bar"&gt&lt;/div&gt;</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;</code></li>
+                <li><code>&lt;/div&gt;</code></li>
+            </ol>
+        </div>
         
-        <strong>HTML</strong>
-          <em>  &lt;div id="{yourId}"&gt;
-                 &lt;div id="{yourId}_content_panel"&gt
-                     &lt;div id="{yourId}_content"&gt
-                     &lt;/div>
-                 &lt;/div>
-                 &lt;div id="{yourId}_bar_panel"&gt
-                     &lt;div id="{yourId}_bar"&gt&lt;/div&gt
-                 &lt;/div&gt
-             &lt;/div&gt  </em>      
-        <strong>CSS</strong>  这些参数是必备的，另外的可以根据自己的需要添加
-            <em>#vscroll{ width:px; height:px; position:relative; overflow:hidden }
-            #vscroll_content_panel{ width:px; height:px; position:absolute; top:0px; left:0px; overflow:hidden }
-            #vscroll_content{ width:px;  position:absolute; top:0; left:0; }
-            #vscroll_bar_panel{ width:px; height:px; background:#; position:absolute; top:px; left:px }
-            #vscroll_bar{ width:px; height:px; background-color:#; position:absolute; top:px; left:px } </em>
+        <h1>CSS<span>以下这些参数是必备的，另外的可以根据自己的需要添加</span></h1>
+        <div class="codeWrapper">
+            <ol>
+                <li><code>#vscroll{ width:px; height:px; position:relative; overflow:hidden }</code></li>
+                <li><code>#vscroll_content_panel{ width:px; height:px; position:absolute; top:0px; left:0px; overflow:hidden }</code></li>
+                <li><code>#vscroll_content{ width:px;  position:absolute; top:0; left:0; }</code></li>
+                <li><code>#vscroll_bar_panel{ width:px; height:px; background:#; position:absolute; top:px; left:px }</code></li>
+                <li><code>#vscroll_bar{ width:px; height:px; background-color:#; position:absolute; top:px; left:px }</code></li>
+            </ol>
+        </div>
+       
+        <h1>JS</h1>
+        <div class="codeWrapper">
+        	<ol>
+            	<li><code>&lt;script type="text/javascript" src="lib/jquery-1.9.1.js"&gt;&lt;/script&gt;</code></li>
+                <li><code>&lt;script type="text/javascript" src="lib/jquery.mousewheel.js"&gt;&lt;/script&gt;</code></li>
+                <li><code>&lt;script type="text/javascript" src="jquery.slider.js"&gt;&lt;/script&gt;</code></li>
+            </ol>
+        </div
         
-        <strong>JS</strong>
-           <em> &lt;script type="text/javascript" src="lib/jquery-1.9.1.js"&gt;&lt;/script&gt;
-            &lt;script type="text/javascript" src="lib/jquery.mousewheel.js"&gt;&lt;/script&gt;
-            &lt;script type="text/javascript" src="jquery.slider.js"&gt;&lt;/script&gt;</em>
-        
-        <strong>调用</strong>
-           <em> $("#{yourId}").jScroll({</em>
+        ><h1>调用</h1>
+        <p>  <em> $("#{yourId}").jScroll({</em>
                  <em>'scroll_enable' : true,</em>   //是否开启滚轮，默认开启
                  <em>'scroll_pace' : 35,</em>      //滚轮每单位滚动的距离， 默认值是35
                 <em> 'scroll_id' : '{yourId}',</em>//触发滚轮的id， 默认是主id，即上述html中第一个标签的id
                 <em> 'layout' : 'vertical'</em> 	//布局方式：vertical(垂直) , horizon（水平）默认为垂直
             <em> });</em>	
-            
-        <strong>下载地址</strong>：<a href="https://github.com/7LI/jQuery-slider" target="_blank">https://github.com/7LI/jQuery-slider</a>
-        作者： <em>Nancle from CAU CS101</em>
-        <a href="http://blog.csdn.net/liuyanzhi08" target="_blank">博客：http://blog.csdn.net/liuyanzhi08	</a>
-         </pre>
+        </p> 
+        <div class="codeWrapper">
+            <ol>
+                <li><code>$("#{yourId}").jScroll({</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;'scroll_enable' : true,   //是否开启滚轮，默认开启</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;'scroll_pace' : 35,      //滚轮每单位滚动的距离， 默认值是35</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;'scroll_id' : '{yourId}',//触发滚轮的id， 默认是主id，即上述html中第一个标签的id</code></li>
+                <li><code>&nbsp;&nbsp;&nbsp;&nbsp;'layout' : 'vertical'   //布局方式：vertical(垂直) , horizon（水平）默认为垂直</code></li>
+                <li><code>});</code></li>
+            </ol>
+        </div>
+        
+        <h1><strong>下载地址</strong>：<a href="https://github.com/7LI/jQuery-slider" target="_blank">https://github.com/7LI/jQuery-slider</a></h1>
+        <p>作者： <em>Nancle from CAU CS101</em></p>
+        <p><a href="http://blog.csdn.net/liuyanzhi08" target="_blank">博客：http://blog.csdn.net/liuyanzhi08	</a></p>
     </div>
 	
 </body>
