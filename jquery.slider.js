@@ -96,7 +96,7 @@
 				$bar.stop().animate({"top":bar_top}, 500);
 				var content_top = (content_height - content_panel_height) * ( bar_top / max_height);	//计算内容滚动的距离
 				$content.stop().animate({"top": -content_top});
-				e.preventDefault();        //阻止默认时间，防止整体页面跟着滚动 
+				e.preventDefault();        //阻止默认事件，防止整体页面跟着滚动 
 			})		
 		}
 	
@@ -138,7 +138,7 @@
 				$bar.stop().animate({"left":bar_left}, 500);
 				var content_left = (content_width - content_panel_width) * ( bar_left / max_width);	//计算内容滚动的距离
 				$content.stop().animate({"left": -content_left});
-				e.preventDefault();        //阻止默认时间，防止整体页面跟着滚动 
+				e.preventDefault();        //阻止默认事件，防止整体页面跟着滚动 
 			})	
 		}
 		
